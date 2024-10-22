@@ -9,7 +9,7 @@ const fetchData = () => {
 }
 
 function renderDesserts(desserts) {
-    containerDiv.classList.add('flex-container')
+    containerDiv.setAttribute('id', 'container');
 
     desserts.forEach((dessert, i) => {
         const div = document.createElement('div');
@@ -18,7 +18,7 @@ function renderDesserts(desserts) {
         const name = document.createElement('p');
         const category = document.createElement('h3');
         const price = document.createElement('p');
-
+ 
         image.src = dessert.image.desktop;
         name.textContent = dessert.name; 
         category.textContent = dessert.category; 

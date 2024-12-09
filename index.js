@@ -15,19 +15,19 @@ function renderDesserts(desserts) {
         const div = document.createElement('div');
         const image = document.createElement('img');
         const button = document.createElement('button');
-        const name = document.createElement('p');
         const category = document.createElement('h3');
+        const name = document.createElement('p');
         const price = document.createElement('p');
  
         image.src = dessert.image.desktop;
+        button.textContent = 'Add to Cart';
         name.textContent = dessert.name; 
         category.textContent = dessert.category; 
         price.textContent = `$${dessert.price}`; 
-        button.textContent = 'Add to Cart';
 
         div.appendChild(image)
-        div.appendChild(name);
         div.appendChild(category);
+        div.appendChild(name);
         div.appendChild(price);
         div.appendChild(button);
         div.classList.add('card');
